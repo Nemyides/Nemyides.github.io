@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Тест</title>
+    <link rel="stylesheet" href="css/test.css" />
+</head>
+<body>
+    <div class="s"><h1>Ответь на вопросы:</h1></div>
+
+    <section class="main">
+
+        <form name="quiz" action="javascript:check();" class="quizform">
+
+            <div class="quizsection">
+
+                <h2>За что вы любите книги?</h2>
+
+                <div class="answer">
+                    <input name="q1" value="value4" id="value4" type="radio" checked="checked" /> За запутанный сюжет
+                </div>
+
+                <div class="answer">
+                    <input name="q1" value="value2" id="value2" type="radio" /> За глубинные проблемы человека
+                </div>
+
+                <div class="answer">
+                    <input name="q1" value="value3" id="value3" type="radio" /> За душещипательные истории
+                </div>
+            </div>
+
+            <div class="quizsection">
+
+                <h2>Какие черты своего характера вы считаете ключевыми?</h2>
+
+                <div class="answer">
+                    <input name="q2" value="value1" id="value1" type="radio" checked="checked" /> Тягу к исследованиям и бурное воображение
+                </div>
+
+                <div class="answer">
+                    <input name="q2" value="value2" id="value2" type="radio" /> Нравственные принципы и честность
+                </div>
+
+                <div class="answer">
+                    <input name="q2" value="value5" id="value5" type="radio" /> Легкость на подъем и бурное воображение
+                </div>
+
+            </div>
+
+            <div class="quizsection">
+
+                <h2>Как вы думаете, для чего человеку нужны деньги? </h2>
+
+                <div class="answer">
+                    <input name="q3" value="value5" id="value5" type="radio" checked="checked" /> Деньги нужны для свободы, делать только то что хочется
+                </div>
+
+                <div class="answer">
+                    <input name="q3" value="value3" id="value3" type="radio" /> Для покупки красивых вещей и романтических путешествий
+                </div>
+
+                <div class="answer">
+                    <input name="q3" value="value1" id="value1" type="radio" /> Для изучения мира и самого себя
+                </div>
+
+            </div>
+
+            <div class="quizsection">
+
+                <h2>Разделяете ли вы такие понятия, как добро и зло? </h2>
+
+                <div class="answer">
+                    <input name="q4" value="value4" id="value4" type="radio" checked="checked" /> В истории немало примеров ошибочного понимая добра и зла. Тут нельзя торопиться
+                </div>
+
+                <div class="answer">
+                    <input name="q4" value="value2" id="value2" type="radio" /> Конечно, как же иначе?
+                </div>
+
+                <div class="answer">
+                    <input name="q4" value="value1" id="value1" type="radio" /> Не задумываюсь о таких вещах
+                </div>
+
+            </div>
+
+            <div class="quizsection">
+
+                <h2>Какой стиль письма вам ближе?  </h2>
+
+                <div class="answer">
+                    <input name="q5" value="value4" id="value4" type="radio" checked="checked" /> Описательный и детальный
+                </div>
+
+                <div class="answer">
+                    <input name="q5" value="value5" id="value5" type="radio" /> Простой и легкий
+                </div>
+
+                <div class="answer">
+                    <input name="q5" value="value3" id="value3" type="radio" /> Эмоциональный и чувствительный
+                </div>
+
+            </div>
+            <input value="Ответить" type="submit" /> <input value="Сбросить" type="reset" />
+
+        </form>
+
+    </section>
+
+    <script type="text/javascript">
+
+
+   var result;
+
+   function check()
+
+   {
+
+      var question;
+      var value1;
+      var value2;
+      var value3;
+      var value4;
+      var value5;
+      
+
+      question = 1;
+      value1 = 0;
+      value2 = 0;
+      value3 = 0;
+      value4 = 0;
+      value5 = 0;
+      
+
+      result = "";
+
+      var choice;
+
+      for (question = 1; question <= 5; question++) {
+
+         var q = document.forms['quiz'].elements['q'+question];
+
+            for (var i = 0; i < q.length; i++) {
+               if (q[i].checked) {
+                  choice = q[i].value;
+               }
+            }
+
+            if (choice == "value1") {
+               value1++;
+            }
+
+            if (choice == "value2") {
+               value2++;
+            }
+
+            if (choice == "value3") {
+               value3++;
+            }
+
+            if (choice == "value4") {
+               value4++;
+            }
+
+            if (choice == "value5") {
+               value5++;
+            }
+
+         }
+
+      if (value1 >= value2 && value1 >= value3 && value1 >= value4 && value1 >= value5 && value1 > 0) {
+
+         // value1 is the highest
+          result = "Fantasy";
+
+      }
+
+      else if (value2 > value1 && value2 >= value3 && value2 >= value4 && value2 >= value5 && value2  > 0) {
+
+         // value2 is the highest
+          result = "Classic";
+
+      }
+
+      else if (value3 > value1 && value3 > value2 && value3 >= value4 && value3 >= value5 && value3 > 0) {
+
+         // value3 is the highest
+          result = "Novel";
+
+      }
+
+      else if (value4 > value1 && value4 > value2 && value4 > value3 && value4 >= value5 && value4 > 0) {
+
+         // value4 is the highest
+          result = "Detectiv";
+
+      }
+
+      else if (value5 > value1 && value5 > value2 && value5 > value3 && value5 > value4 && value5 > 0) {
+
+         // value5 is the highest
+          result = "Adventure";
+
+      }
+
+      window.location = result + '.html';
+
+   }
+
+    </script>
+</body>
+</html>

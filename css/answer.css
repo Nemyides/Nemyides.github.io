@@ -1,0 +1,71 @@
+body {
+    background-image: linear-gradient(rgba(249,252,249,0.9), rgba(203,249,203,0.9)), url(../png/background.jpg);
+    background-attachment: fixed;
+}
+.s {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.s h1 {
+    font-weight: normal;
+    font-family: 'Merriweather', serif;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    line-height: 1;
+    color: black;
+    font-size: 50px;
+    padding: .4em 1em .55em;
+}
+
+.s h1:before,
+.s h1:after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: .1em;
+    background: #294200;
+}
+
+.s h1:before {
+    left: 0;
+    top: 0;
+}
+
+.s h1:after {
+     right: 0;
+     bottom: 0;
+}
+
+.s h1 span:before,
+.s h1 span:after {
+     content: "";
+     position: absolute;
+     width: .65em;
+     height: .65em;
+     border: .1em solid #294200;
+     border-radius: 50%;
+     box-sizing: border-box;
+ }
+
+.s h1 span:before {
+     top: -.55em;
+     left: -.325em;
+}
+
+.s h1 span:after {
+    bottom: -.55em;
+    right: -.325em;
+}
+
+.op {
+    text-align: center;
+    font-family: 'Merriweather', 'Times New Roman', serif;
+    font-size: 25px;
+}
+
+.spi{
+    font-family: 'Merriweather', 'Times New Roman', serif;
+    font-size: 25px;
+}

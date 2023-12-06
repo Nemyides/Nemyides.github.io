@@ -1,0 +1,133 @@
+﻿body {
+    background-image: linear-gradient(rgba(249,252,249,0.9), rgba(203,249,203,0.9)), url(../png/background.jpg);
+    background-attachment: fixed;
+}
+
+.s{
+    padding: 50px 20px;
+    text-align: center;
+}
+.s h1 {
+    font-weight: normal;
+    font-family: 'Merriweather', serif;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    line-height: 1;
+    color: black;
+    font-size: 50px;
+    padding: .4em 1em .55em;
+ }
+.s h1:before,
+.s h1:after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: .1em;
+    background: #294200;
+}
+
+.s h1:before {
+    left: 0;
+    top: 0;
+}
+
+.s h1:after {
+    right: 0;
+    bottom: 0;
+}
+
+.s h1 span:before,
+.s h1 span:after {
+    content: "";
+    position: absolute;
+    width: .65em;
+    height: .65em;
+    border: .1em solid #294200;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.s h1 span:before {
+    top: -.55em;
+    left: -.325em;
+}
+
+.s h1 span:after {
+    bottom: -.55em;
+    right: -.325em;
+}
+
+@media (max-width: 600px) {
+    .s h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 450px) {
+    .s h1 {
+        font-size: 1.5em;
+    }
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+}
+.end {
+    text-align: center;
+    font-family: 'Merriweather', 'Times New Roman', serif;
+    font-size: 25px;
+}
+
+a {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+a {
+    display: block;
+    width: 200px;
+    height: 65px;
+    line-height: 65px;
+    font-size: 29px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+}
+
+a span {
+        position: relative;
+        z-index: 2;
+}
+
+.tekst {
+    width: 623px;
+    padding: 10px 30px;
+    border-left: 8px solid rgb(203,249,203,0.9);
+    font-family: 'Merriweather', 'Times New Roman', serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #333333;
+}
+
+.tekst p {
+        margin-top: 0;
+        font-size: 27px;
+        line-height: 50px;
+
+}
+
+.tekst footer {
+        font-size: 16px;
+        line-height: 30px;
+        font-style: normal;
+}
+    
